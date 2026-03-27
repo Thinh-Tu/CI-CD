@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Dashboard for E-Commerce API">
+  <title>{{title}} - Dashboard</title>
+  
+  <!-- Modern Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons for aesthetic icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar glass-panel">
+    <div class="brand">
+      <i class="ph ph-cube"></i>
+      <span>NexusAPI</span>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a href="/" class="nav-item active">
+            <i class="ph ph-squares-four"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/api/v1/products" class="nav-item" target="_blank">
+            <i class="ph ph-shopping-bag"></i>
+            <span>Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="/api/v1/categories" class="nav-item" target="_blank">
+            <i class="ph ph-folder-open"></i>
+            <span>Categories</span>
+          </a>
+        </li>
+        <li>
+          <a href="/api/v1/users" class="nav-item" target="_blank">
+            <i class="ph ph-users"></i>
+            <span>Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="/api/v1/inventories" class="nav-item" target="_blank">
+            <i class="ph ph-warehouse"></i>
+            <span>Inventory</span>
+          </a>
+        </li>
+        <li style="margin-top: 32px;">
+          <a href="/api/v1/roles" class="nav-item" target="_blank">
+            <i class="ph ph-shield-check"></i>
+            <span>Roles & Auth</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main View -->
+  <main class="main-wrapper">
+    <header class="topbar glass-panel">
+      <div class="search-bar">
+        <i class="ph ph-magnifying-glass" style="color: var(--text-muted)"></i>
+        <input type="text" placeholder="Search resources...">
+      </div>
+      
+      <div class="user-profile">
+        <div style="text-align: right">
+          <div style="font-weight: 600; font-size: 14px">Admin User</div>
+          <div style="color: var(--text-muted); font-size: 12px">admin@nexus.com</div>
+        </div>
+        <div class="avatar">
+          AD
+        </div>
+      </div>
+    </header>
+
+    <div class="content animate-fade-in">
+      {{{body}}}
+    </div>
+  </main>
+
+  <script>
+    // Simple script to highlight active nav
+    document.querySelectorAll('.nav-item').forEach(link => {
+      let isLocal = !link.getAttribute('target');
+      if (link.href === window.location.href && isLocal) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

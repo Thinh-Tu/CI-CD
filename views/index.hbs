@@ -1,0 +1,156 @@
+<div class="page-header">
+  <h1 class="page-title">Overwatch Dashboard</h1>
+  <p class="page-subtitle">Welcome back. Here is the latest overview of NexusAPI.</p>
+</div>
+
+<div class="stats-grid">
+  <!-- Stat 1 -->
+  <div class="stat-card glass-panel" style="border-left: 4px solid var(--accent-1)">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start">
+      <div class="stat-icon" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-1)">
+        <i class="ph ph-shopping-bag"></i>
+      </div>
+      <div style="color: #10b981; font-weight: 600; font-size: 14px; background: rgba(16, 185, 129, 0.1); padding: 4px 8px; border-radius: 8px;">
+        +12.5%
+      </div>
+    </div>
+    <div>
+      <div class="stat-value">1,492</div>
+      <div class="stat-label">Total Products</div>
+    </div>
+  </div>
+
+  <!-- Stat 2 -->
+  <div class="stat-card glass-panel" style="border-left: 4px solid var(--accent-2)">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start">
+      <div class="stat-icon" style="background: rgba(129, 140, 248, 0.1); color: var(--accent-2)">
+        <i class="ph ph-users"></i>
+      </div>
+      <div style="color: #10b981; font-weight: 600; font-size: 14px; background: rgba(16, 185, 129, 0.1); padding: 4px 8px; border-radius: 8px;">
+        +4.2%
+      </div>
+    </div>
+    <div>
+      <div class="stat-value">845</div>
+      <div class="stat-label">Active Users</div>
+    </div>
+  </div>
+
+  <!-- Stat 3 -->
+  <div class="stat-card glass-panel" style="border-left: 4px solid var(--accent-3)">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start">
+      <div class="stat-icon" style="background: rgba(192, 132, 252, 0.1); color: var(--accent-3)">
+        <i class="ph ph-currency-dollar"></i>
+      </div>
+      <div style="color: #f43f5e; font-weight: 600; font-size: 14px; background: rgba(244, 63, 94, 0.1); padding: 4px 8px; border-radius: 8px;">
+        -2.1%
+      </div>
+    </div>
+    <div>
+      <div class="stat-value">$24,500</div>
+      <div class="stat-label">Revenue (30d)</div>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; gap: 24px;">
+  <!-- Main Table -->
+  <div class="glass-panel" style="flex: 2; padding: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h2 style="font-size: 18px; font-weight: 700;">Recent Deployments</h2>
+      <button class="btn btn-primary" onclick="window.location.reload()">
+        <i class="ph ph-arrows-clockwise"></i>
+        Sync Data
+      </button>
+    </div>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 500;">
+              <div>NexusAPI Core View</div>
+              <div style="font-size: 12px; color: var(--text-muted)">v1.2.0</div>
+            </td>
+            <td><span class="badge active">Live</span></td>
+            <td>Just now</td>
+            <td>System Admin</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 500;">
+              <div>User Endpoints</div>
+              <div style="font-size: 12px; color: var(--text-muted)">v1.1.5</div>
+            </td>
+            <td><span class="badge active">Live</span></td>
+            <td>2 hours ago</td>
+            <td>CI/CD Bot</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 500;">
+              <div>Product Validations</div>
+              <div style="font-size: 12px; color: var(--text-muted)">v1.1.4</div>
+            </td>
+            <td><span class="badge" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">Review</span></td>
+            <td>Yesterday</td>
+            <td>Developer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="glass-panel" style="flex: 1; padding: 24px;">
+    <h2 style="font-size: 18px; font-weight: 700; margin-bottom: 24px;">API Endpoints</h2>
+    
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <a href="/api/v1/users" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: 12px; background: rgba(255, 255, 255, 0.03); display: flex; align-items: center; justify-content: space-between; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(99, 102, 241, 0.1)'; this.style.borderColor='rgba(99, 102, 241, 0.3)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--border-color)';">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: var(--accent-1)"><i class="ph ph-users" style="font-size: 24px;"></i></div>
+            <div style="font-weight: 600;">/users</div>
+          </div>
+          <i class="ph ph-arrow-right"></i>
+        </div>
+      </a>
+
+      <a href="/api/v1/products" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: 12px; background: rgba(255, 255, 255, 0.03); display: flex; align-items: center; justify-content: space-between; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(99, 102, 241, 0.1)'; this.style.borderColor='rgba(99, 102, 241, 0.3)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--border-color)';">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: var(--accent-2)"><i class="ph ph-shopping-bag" style="font-size: 24px;"></i></div>
+            <div style="font-weight: 600;">/products</div>
+          </div>
+          <i class="ph ph-arrow-right"></i>
+        </div>
+      </a>
+
+      <a href="/api/v1/categories" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: 12px; background: rgba(255, 255, 255, 0.03); display: flex; align-items: center; justify-content: space-between; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(99, 102, 241, 0.1)'; this.style.borderColor='rgba(99, 102, 241, 0.3)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--border-color)';">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: var(--accent-3)"><i class="ph ph-folder-open" style="font-size: 24px;"></i></div>
+            <div style="font-weight: 600;">/categories</div>
+          </div>
+          <i class="ph ph-arrow-right"></i>
+        </div>
+      </a>
+      
+      <a href="/api/v1/auth" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: 12px; background: rgba(255, 255, 255, 0.03); display: flex; align-items: center; justify-content: space-between; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(99, 102, 241, 0.1)'; this.style.borderColor='rgba(99, 102, 241, 0.3)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='var(--border-color)';">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: #10b981"><i class="ph ph-lock-key" style="font-size: 24px;"></i></div>
+            <div style="font-weight: 600;">/auth</div>
+          </div>
+          <i class="ph ph-arrow-right"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
